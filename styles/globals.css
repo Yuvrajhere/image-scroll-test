@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -15,12 +20,85 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,body,#wrapper,.header, .header p, #main,#main div,#main div p {
+  width: 100%;
+}
+
+html,body,#wrapper, .header p {
+  height: 100%;
+}
+
+html{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+#main {
+  height: 500%;
+  z-index: 9;
+  transition: transform 1s ease;
+}
+
+#wrapper {
+  float: left;
+  z-index: 10;
+  overflow: hidden;
+}
+
+#main div {
+  height: 20%;
+  text-align: center;
+  transform: translateZ(0);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+#main div p {
+  margin: auto;
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  font-size: 78px;
+  line-height: 100px;
+}
+
+.header {
+  height: 70px;
+  position: fixed;
+  top:0;
+  z-index:10;
+  background: #ffffff;
+  background: rgba(255,255,255,0.5);
+}
+
+.header p {
+  text-align: center;
+  font-size: 22px;
+  line-height: 70px;
+}
+
+.one {
+  background: url(https://25.media.tumblr.com/b273172b94f360682fe9d9b5b78ad672/tumblr_mr80a1mhlR1st5lhmo1_1280.jpg);
+}
+
+.two {
+  background: url(https://25.media.tumblr.com/88a5e8c5b4b76f7bced06e7d6195eeba/tumblr_mq7emjlEUK1st5lhmo1_1280.jpg);
+}
+
+.three {
+  background: url(https://31.media.tumblr.com/fe341bc8e2f82db9e03cbb5a4323a84f/tumblr_mq7ejb3POL1st5lhmo1_1280.jpg);
+}
+
+.four {
+  background: url(https://31.media.tumblr.com/cdc005978435b371b679cebf7f45a6d0/tumblr_mpp6adioyB1st5lhmo1_1280.jpg);
+}
+
+.five {
+  background: url(https://25.media.tumblr.com/2922b1dbf50288b4e04f7804317fef64/tumblr_mp6scv2xrZ1st5lhmo1_1280.jpg);
 }
